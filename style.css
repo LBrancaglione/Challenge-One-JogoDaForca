@@ -1,0 +1,268 @@
+.navLogo {
+    width: 31.09px;
+    height: 48px;
+    margin-left: 4.67%;
+    margin-top: 2.43%;
+}
+
+.btnsStart {
+    display: flex;
+    flex-direction: column;
+    margin: 12% 38%;
+}
+
+button {
+    margin-bottom: 10px;
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    width: 317px;
+    height: 102px;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+button:nth-child(n+1) {
+    width: 332px;
+    height: 67px;
+}
+
+.btnsStart>button:first-of-type {
+    background-color: #0A3871;
+    color: white;
+}
+
+.btnsStart>button:last-of-type {
+    background-color: white;
+    color: #0A3871;
+}
+
+.newWordTextArea {
+    display: none;
+    width: 513px;
+    height: 100px;
+    margin-left: 376px;
+    margin-top: 100px;
+    color: #0A3871;
+}
+
+.newWordTextArea textarea {
+    width: 613px;
+    height: 200px;
+    border-style: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+textarea::placeholder {
+    color: #0A3871;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.newWordFooter {
+    display: none;
+}
+
+.newWordFooter p {
+    position: absolute;
+    margin: -1% 27%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+}
+
+.newWordBtns {
+    /*display: flex;*/
+    display: flex;
+    flex-direction: row;
+    margin: 15% 25%;
+    width: 688px;
+    height: 67px;
+}
+
+.newWordBtns>button {
+    width: 332px;
+    height: 67px;
+    margin: 10px;
+}
+
+.newWordBtns>button:first-of-type {
+    background-color: #0A3871;
+    color: white;
+}
+
+.newWordBtns>button:last-of-type {
+    background-color: white;
+    color: black;
+}
+
+canvas {
+    display: none;
+    position: absolute;
+    width: 294px;
+    height: 360px;
+    left: 513px;
+    top: 70px;
+}
+
+.input {
+    /* Auto layout */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+
+    position: absolute;
+    width: 464px;
+    height: 152px;
+    left: 300px;
+    top: 368px;
+}
+
+.rectangles {
+    display: none;
+    position: absolute;
+    left: -126px;
+    top: -5px;
+}
+
+.rectangles p {
+    position: absolute;
+    width: 16px;
+    height: 36px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+    color: #495057;
+    margin-left: 652px;
+    margin-top: 450px;
+    top: 90px;
+    left: 65px;
+}
+
+.rectangle {
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    left: 0px;
+    top: 520px;
+    margin-left: 428px;
+    /* Dark blue/dark-blue-300 */
+    background: #0A3871;
+    border-radius: 8px;
+}
+
+.rectangle:nth-child(2) {
+    left: 96px;
+}
+
+.rectangle:nth-child(3) {
+    left: 192px;
+}
+
+.rectangle:nth-child(4) {
+    left: 288px;
+}
+
+.rectangle:nth-child(5) {
+    left: 384px;
+}
+
+.rectangle:nth-child(6) {
+    left: 480px;
+}
+
+.rectangle:nth-child(7) {
+    left: 576px;
+}
+
+.rectangle:nth-child(8) {
+    left: 672px;
+}
+
+.letter {
+    position: absolute;
+    width: 80px;
+    height: 102px;
+    left: 0px;
+    top: 70px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    border-style: none;
+    /* identical to box height, or 72px */
+    text-align: center;
+    color: #0A3871;
+}
+
+.letter:nth-child(2) {
+    left: 96px;
+}
+
+.letter:nth-child(3) {
+    left: 192px;
+}
+
+.letter:nth-child(4) {
+    left: 288px;
+}
+
+.letter:nth-child(5) {
+    left: 384px;
+}
+
+.letter:nth-child(6) {
+    left: 480px;
+}
+
+.letter:nth-child(7) {
+    left: 576px;
+}
+
+.letter:nth-child(8) {
+    left: 672px;
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.inGameBtns {
+    display: none;
+    margin-top: 36%;
+    margin-left: 24%;
+}
+
+.inGameBtns>button:first-of-type {
+    background-color: #0A3871;
+    color: white;
+}
+
+.inGameBtns>button:last-of-type {
+    background-color: white;
+    color: #0A3871;
+}

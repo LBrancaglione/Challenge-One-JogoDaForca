@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">
+        <header>
+            <a href="https://www.alura.com.br"><img src="images/Vector.png" class="navLogo"></a>
+        </header>
+        <!--First screen of the game starts here-->
+        <section>
+            <div class="btnsStart" id="btnsStart">
+                <button id="startBtn" onclick="gameStart()">Começar a jogar</button>
+                <button id="newBtn" onclick="newWordLoad()">Adicionar uma nova palavra</button>
+            </div>
+        </section>
+        <!--First screen of the game ends here-->
+        <!--New word screen starts here-->
+        <section class="newWordTextArea" id="newWordInput">
+            <textarea pattern="[a-zA-Z]*" placeholder="Digite a nova palavra" name="newWord" id="newWord" cols="30" rows="10" maxlength="8"></textarea>
+        </section>
+        <footer class="newWordFooter" id="newWordFooter">
+            <p>⚠ Maximo de 8 letras</p>
+            <div class="newWordBtns">
+                <button id="saveBtn" onclick="saveNewWord()">Salvar e começar</button>
+                <button id="cancelBtn" onclick="back()">Cancelar</button>
+            </div>
+        </footer>
+        <!--New word screen starts here-->
+        <!--game screen starts here-->
+        <canvas id="drawArea"></canvas>
+        <section class="input" id="input">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter1" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter2" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter3" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter4" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter5" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter6" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter7" class="letter" maxlength="1" onkeyup="main()">
+           <input pattern="([aA-zZ]+)" placeholder="-" type="text" id="letter8" class="letter" maxlength="1" onkeyup="main()">
+        </section>
+        <section class="rectangles" id="rectangles">
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <div class="rectangle"></div>
+            <p id="wrongLetters"></p>
+        </section>
+        <footer class="inGameBtns" id="inGameBtns">
+            <button id="newGameBtn" onclick="randomWord()">Novo Jogo</button>
+            <button id="quitBtn" onclick="back()">Desistir</button>
+        </footer>
+        <!--game screen ends here-->
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
