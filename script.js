@@ -1,9 +1,9 @@
 //global variables
 var words = [
-    'CAVALO',
-    'GATO',
-    'CACHORRO',
-    'PASSARO'
+    'cavalo',
+    'gato',
+    'cachorro',
+    'passaro'
 ];
 var word;
 var hit = 0;
