@@ -1,10 +1,5 @@
 //global variables
-var words = [
-    'cavalo',
-    'gato',
-    'cachorro',
-    'passaro'
-];
+var words = [];
 var word;
 var hit = 0;
 var mainInput = [];
@@ -20,75 +15,78 @@ var canvas = document.getElementById('drawArea');
 textArea = document.getElementById('newWord');
 //We need to add two functions to make the style change when the user click over a button in the start page, we will load content and make some content became invisible for the user
 function gameStart() {
-    var start = document.getElementById('btnsStart');
-    var draw = document.getElementById('drawArea');
-    var mainInput = document.getElementById('input');
-    var inGameBtns = document.getElementById('inGameBtns');
-    var rectangles = document.getElementById('rectangles');
-    var input01 = document.getElementById('letter1');
-    var input02 = document.getElementById('letter2');
-    var input03 = document.getElementById('letter3');
-    var input04 = document.getElementById('letter4');
-    var input05 = document.getElementById('letter5');
-    var input06 = document.getElementById('letter6');
-    var input07 = document.getElementById('letter7');
-    var input08 = document.getElementById('letter8');
-    input08.style.cssText = 'text-transform: uppercase;';
-    input07.style.cssText = 'text-transform: uppercase;';
-    input06.style.cssText = 'text-transform: uppercase;';
-    input05.style.cssText = 'text-transform: uppercase;';
-    input04.style.cssText = 'text-transform: uppercase;';
-    input03.style.cssText = 'text-transform: uppercase;';
-    input02.style.cssText = 'text-transform: uppercase;';
-    input01.style.cssText = 'text-transform: uppercase;';
-    start.style.cssText = 'display: none';
-    draw.style.cssText = 'display: block';
-    mainInput.style.cssText = 'display: flex';
-    inGameBtns.style.cssText = 'display: block';
-    rectangles.style.cssText = 'display: block';
-    if (letter.length == 7) {
-        input08.style.cssText = 'display: none';
+    if (words.length > 0) {
+        var start = document.getElementById('btnsStart');
+        var draw = document.getElementById('drawArea');
+        var mainInput = document.getElementById('input');
+        var inGameBtns = document.getElementById('inGameBtns');
+        var rectangles = document.getElementById('rectangles');
+        var input01 = document.getElementById('letter1');
+        var input02 = document.getElementById('letter2');
+        var input03 = document.getElementById('letter3');
+        var input04 = document.getElementById('letter4');
+        var input05 = document.getElementById('letter5');
+        var input06 = document.getElementById('letter6');
+        var input07 = document.getElementById('letter7');
+        var input08 = document.getElementById('letter8');
+        input08.style.cssText = 'text-transform: uppercase;';
+        input07.style.cssText = 'text-transform: uppercase;';
+        input06.style.cssText = 'text-transform: uppercase;';
+        input05.style.cssText = 'text-transform: uppercase;';
+        input04.style.cssText = 'text-transform: uppercase;';
+        input03.style.cssText = 'text-transform: uppercase;';
+        input02.style.cssText = 'text-transform: uppercase;';
+        input01.style.cssText = 'text-transform: uppercase;';
+        start.style.cssText = 'display: none';
+        draw.style.cssText = 'display: block';
+        mainInput.style.cssText = 'display: flex';
+        inGameBtns.style.cssText = 'display: block';
+        rectangles.style.cssText = 'display: block';
+        if (letter.length == 7) {
+            input08.style.cssText = 'display: none';
+        }
+        if (letter.length == 6) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+        }
+        if (letter.length == 5) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+            input06.style.cssText = 'display: none';
+        }
+        if (letter.length == 4) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+            input06.style.cssText = 'display: none';
+            input05.style.cssText = 'display: none';
+        }
+        if (letter.length == 3) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+            input06.style.cssText = 'display: none';
+            input05.style.cssText = 'display: none';
+            input04.style.cssText = 'display: none';
+        }
+        if (letter.length == 2) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+            input06.style.cssText = 'display: none';
+            input05.style.cssText = 'display: none';
+            input04.style.cssText = 'display: none';
+            input03.style.cssText = 'display: none';
+        }
+        if (letter.length == 1) {
+            input08.style.cssText = 'display: none';
+            input07.style.cssText = 'display: none';
+            input06.style.cssText = 'display: none';
+            input05.style.cssText = 'display: none';
+            input04.style.cssText = 'display: none';
+            input03.style.cssText = 'display: none';
+            input02.style.cssText = 'display: none';
+        }
+        alert("Você tem 5 vidas para tentar acertar o maior numero de palavras, não existem palavras com acento ou números, mas se inseri-los será computado como erro ! Vamos ver o quantas palavras você acerta.");
     }
-    if (letter.length == 6) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-    }
-    if (letter.length == 5) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-        input06.style.cssText = 'display: none';
-    }
-    if (letter.length == 4) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-        input06.style.cssText = 'display: none';
-        input05.style.cssText = 'display: none';
-    }
-    if (letter.length == 3) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-        input06.style.cssText = 'display: none';
-        input05.style.cssText = 'display: none';
-        input04.style.cssText = 'display: none';
-    }
-    if (letter.length == 2) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-        input06.style.cssText = 'display: none';
-        input05.style.cssText = 'display: none';
-        input04.style.cssText = 'display: none';
-        input03.style.cssText = 'display: none';
-    }
-    if (letter.length == 1) {
-        input08.style.cssText = 'display: none';
-        input07.style.cssText = 'display: none';
-        input06.style.cssText = 'display: none';
-        input05.style.cssText = 'display: none';
-        input04.style.cssText = 'display: none';
-        input03.style.cssText = 'display: none';
-        input02.style.cssText = 'display: none';
-    }
-    alert("Você tem 5 vidas para tentar acertar o maior numero de palavras, não existem palavras com acento ou números, mas se inseri-los será computado como erro ! Vamos ver o quantas palavras você acerta.");
+    else alert("Por-favor adicione uma palavra!");
 }
 
 function newWordLoad() {
@@ -125,11 +123,14 @@ function back() {
 function main() {
     var wrongLetter;
     console.log(wrongLetters);
+    console.log(letter);
     userInput.push(document.getElementById('letter' + count1).value);
     document.getElementById('letter' + count1).readOnly = true;
     var anyLetter = document.getElementById('letter' + count1);
     userInput[count2] = userInput[count2].toUpperCase();
-    letter[count2] = letter[count2].toUpperCase();
+    if (letter[count2] === letter[count2].toLowerCase()) {
+        letter[count2] = letter[count2].toUpperCase();
+    }
     console.log(userInput);
     console.log(count1);
     console.log(count2);
@@ -826,13 +827,13 @@ function cleanWrongLetters() {
     document.getElementById('wrongLetters').innerHTML = "";
 }
 
-textArea.addEventListener("keypress", function(e){
+textArea.addEventListener("keypress", function (e) {
     const keyCode = (e.keyCode ? e.keyCode : e.wich);
 
-    if(keyCode > 47 && keyCode < 58){
+    if (keyCode > 47 && keyCode < 58) {
         e.preventDefault();
-    } 
-    if(keyCode > 191 && keyCode <= 255){
+    }
+    if (keyCode > 191 && keyCode <= 255) {
         e.preventDefault();
     }
 })
